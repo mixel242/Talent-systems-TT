@@ -3,14 +3,16 @@ from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeo
 
 
 def run(playwright: Playwright) -> None:
+
     # Assess
     browser = playwright.chromium.launch(headless=False)
     context = browser.new_context()
+
     # Open new page
     page = context.new_page()
-    # Go to https://www.amazon.com/Echo-Dot/dp/B084J4KNDS/
     page.goto("https://www.amazon.com/Echo-Dot/dp/B084J4KNDS/")
     page.set_default_timeout(30000)
+
     # Act
     page.locator("[id=\"icp-nav-flyout\"]").click()
     page.locator("text=English - EN").click()
