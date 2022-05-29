@@ -1,0 +1,35 @@
+Reported problem:
+    As an amazon.com customer, I want a cart experience to be flawless.
+    Recently it has been observed that there is some disconnect between quantity, and total price until I get to the checkout page.
+    These problems have caused an increase in support tickets and buyers leaving the item in the cart and not finishing the purchase.
+    Test case #1 add an Alexa to the amazon shopping cart
+
+summary:
+
+    as a user
+
+    Entering URL: https://www.amazon.com/Echo-Dot/dp/B084J4KNDS/
+
+parameters:
+
+    Alexa
+
+    Quantities added to cart per iteration 1, 4
+
+Steps:
+
+    step 1: enter the amazon website through the URL https://www.amazon.com/Echo-Dot/dp/B084J4KNDS/
+
+    step 2: change the language of the page to English
+
+    step 3: add a valid zip code to be able to test with an Alexa product (zip code 33101)
+
+    step 4: click on the add product button
+
+    Step 5: Close Your Associated Product Requisitions Window
+
+    step 6: click the Go to Cart button
+
+    step 7: click on the product quantity selector
+
+    step 8: change the number of products to 4 and verify that the subtotal is the correct sum of 4 times the value of the product added to the cart
